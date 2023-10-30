@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gridlayout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 2fr;
+            grid-template-rows: 60px auto 100px;
+            grid-template-areas: 
+            'sideNav myHeader myHeader myHeader'
+            'sideNav mainContent mainContent mainContent'
+            'sideNav myFooter myFooter myFooter';
+        }
+        header{
+            grid-area: myHeader;
+            background-color: rgb(116, 48, 48);
+             width: 100%;
+             color: white;
+             display: flex;
+             text-decoration: none;
+        }
+        .logo a{
+            text-decoration: none;
+            color: white;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        aside > a{
+            text-decoration: none;
+            color: white;
+            margin-left: 6px;
+            font-size: 26px;
+        }
+        aside{
+            grid-area: sideNav;
+            background-color: rgb(29, 17, 17);
+            width: 100%;
+            color: white;
+            border-right: 2px solid;
+        }
+        main{
+            grid-area: mainContent;
+            background-color: rgb(29, 17, 17);
+            width: 100%;
+            color: white;
+        }
+        .hello{
+           width: 81%;
+           display: flex;
+           justify-content: center;
+           align-content: center;
+           flex-direction: column;
+           flex-wrap: wrap;
+        }
+        button{
+            background-color: rgb(116, 48, 48);
+            color: white;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            border-radius: 2px;
+            
+        }
+        .hey{
+            text-align: center;
+            padding-top: 10px;
+        }
+        .heads{
+            margin-top: 10px;
+            /* margin-left: 10px; */
+            text-align: center;
+            
+        }
+        .aisha{
+            /* display: inline; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .mubee{
+            margin-top: 200px;
+            margin-left: 10px;
+        }
+        
+        .flexpay{
+            display: flex;
+            
+        }
+        footer{
+            grid-area: myFooter;
+            background-color: rgb(116, 48, 48);
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+            <section class="logo">
+                <a  href="#">About</a>
+                <a href="#">Location</a>
+                <a href="#">Contact</a>
+           </section>
+           <section class="logo">
+            <a  href="#">Our Product</a>
+         </section>
+        </header>
+        <aside>
+            <a href="#">HOME</a>
+        </aside>
+        <main class="flexpay">
+         <div class="aisha">
+            <p class="mubee">HOMEMADE <br> BREAD ONLY <br> FOR YOU</p>
+        
+         </div>
+         <div class="hello">
+            <h1 class="heads">Good choice for breakfast</h1>
+            <img class="pix" src="images/bread.png" alt="bread">
+            <div class="hey">
+                <button>BUY NOW</button>
+             <button>READ MORE</button>
+             </div>
+        </div>
+        </main>
+        <footer>
+            <p>Lorem ipsum, dolor sit <br> amet consectetur adipisicing <br> elit. Qui, dolorem? 2345 MARMARA</p>
+            <p>Lorem ipsum dolor sit, <br> amet consectetur adipisicing <br> elit. Doloribus, 2345 MARABAN RIDO</p>
+           </footer>
+    </section>
+</body>
+</html>
